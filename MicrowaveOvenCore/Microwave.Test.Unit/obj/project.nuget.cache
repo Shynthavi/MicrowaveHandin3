@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dyEBH+3JbUS9qI+b2SqALfhL6x10Xdqbw1OAmmyfVWl/1UZs3qbJEl+lFvPHrRL1olf5xPPZDUX9Mnx2rcUGLw==",
+  "dgSpecHash": "pjjEAHx+GdnqXqkYmueTgVcCctH0xvmZfPJyeE/EukzuZ8uuyErwGOob4kDQLONuvx+mEy3pd5LwKwOl/wTj5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Test.Unit\\Microwave.Test.Unit.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\nsubstitute\\4.2.2\\nsubstitute.4.2.2.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
-    "C:\\Users\\Lucas\\.nuget\\packages\\nunit\\3.13.1\\nunit.3.13.1.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\nunit\\3.13.2\\nunit.3.13.2.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\nunit3testadapter\\3.17.0\\nunit3testadapter.3.17.0.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\nunitxml.testlogger\\3.0.97\\nunitxml.testlogger.3.0.97.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",

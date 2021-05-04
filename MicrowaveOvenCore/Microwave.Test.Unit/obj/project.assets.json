@@ -473,7 +473,7 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
-      "NUnit/3.13.1": {
+      "NUnit/3.13.2": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -2230,10 +2230,10 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "NUnit/3.13.1": {
-      "sha512": "vWBvrSelmTYwqHWvO3dA63z7cOpaFR/3nJ9MMVLBkWeaWa7oiglPPm5g1h96B4i2XXqjFexxhR5MyMjmIJYPfg==",
+    "NUnit/3.13.2": {
+      "sha512": "u+fz/lXyR4vlamySNAEMrXvh+GhAQiB6/aVZtU5WjivR5zF26Ui0tfteDtWqT90k9D8y6g8rFKYQC97Z7d195w==",
       "type": "package",
-      "path": "nunit/3.13.1",
+      "path": "nunit/3.13.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2250,7 +2250,7 @@
         "lib/net45/nunit.framework.xml",
         "lib/netstandard2.0/nunit.framework.dll",
         "lib/netstandard2.0/nunit.framework.xml",
-        "nunit.3.13.1.nupkg.sha512",
+        "nunit.3.13.2.nupkg.sha512",
         "nunit.nuspec"
       ]
     },
@@ -5108,7 +5108,7 @@
       "Microsoft.NET.Test.Sdk >= 16.9.4",
       "Microwave.Classes >= 1.0.0",
       "NSubstitute >= 4.2.2",
-      "NUnit >= 3.13.1",
+      "NUnit >= 3.13.2",
       "NUnit3TestAdapter >= 3.17.0",
       "NunitXml.TestLogger >= 3.0.97"
     ]
@@ -5170,7 +5170,7 @@
           },
           "NUnit": {
             "target": "Package",
-            "version": "[3.13.1, )"
+            "version": "[3.13.2, )"
           },
           "NUnit3TestAdapter": {
             "target": "Package",
