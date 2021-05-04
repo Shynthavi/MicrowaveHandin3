@@ -11,7 +11,7 @@ namespace Microwave.Test.Integrationtest
     {
         private IButton _powerButton;
         private IButton _timeButton;
-        private IButton _cancelStartButton;
+        private IButton _startCancelButton;
         private IDoor _door;
         private ICookController _cookController;
         private IDisplay _display;
@@ -22,71 +22,61 @@ namespace Microwave.Test.Integrationtest
         [SetUp]
         public void Setup()
         {
-            _powerButton = Substitute.For<IButton>();
-            _timeButton = Substitute.For<IButton>();
-            _cancelStartButton = Substitute.For<IButton>();
-            _door = Substitute.For<IDoor>();
+            _powerButton = new Button();
+            _timeButton = new Button();
+            _startCancelButton = new Button();
+            _door = new Door();
             _cookController = Substitute.For<ICookController>();
             _display = Substitute.For<IDisplay>();
             _light = Substitute.For<ILight>();
-            
-            _userInterface = new UserInterface(_powerButton, _timeButton, _cancelStartButton, _door, _display, _light, _cookController);
+
+            _userInterface = new UserInterface(_powerButton, _timeButton, _startCancelButton, _door, _display, _light,
+                _cookController);
         }
 
         [Test]
         public void Door_Opened_Light_On()
         {
+            //Act
             _door.Open();
-            _light.TurnOn();
+            //Assert
+            _light.Received(1).TurnOn();
         }
 
 
         [Test]
         public void Door_Closed_LightOff()
         {
-            _door.Open();
             //Act
+            _door.Open();
             _door.Close();
             //Assert
-            _light.TurnOff();
-        }
-
-        [Test]
-        public void PowerButton_IsPressed_ShowPower()
-        {
-            //Act
-            _powerButton.Press();
-            //Assert
-            _display.ShowPower(5);
-        }
-
-        [Test]
-        public void TimeButton_IsPressed_TimerOn()
-        {
-            //Arrange
-            _powerButton.Press();
-            //Act
-            _timeButton.Press();
-            //Assert
-            _display.ShowTime(5,30);
+            _light.Received(1).TurnOff();
         }
 
 
         [Test]
-        public void CancelStartButton_IsPressed_LightOn_CookingStart()
+        public void Door_Opened_Cooking_Started()
         {
             //Arrange
             _powerButton.Press();
             _timeButton.Press();
+            _startCancelButton.Press();
+
             //Act
-            _cancelStartButton.Press();
+            _door.Open();
+
             //Assert
-            _light.TurnOn();
-            _cookController.StartCooking(5, 5);
+            Assert.Multiple(() =>
+            {
+                _display.Received(1).Clear();
+                _cookController.Received(1).Stop();
+            });
         }
+
+
 
 
     }
 
-   
 }
