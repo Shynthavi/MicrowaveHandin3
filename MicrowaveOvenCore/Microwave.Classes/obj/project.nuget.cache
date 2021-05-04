@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3Foriu2Yjjr5Aegw4ra4GuRxBO04H3mmXbaimkF3w3/SZurxF5wzhmOU+kFO6blZuc4jCw9Rjd39VyDhuedVkA==",
+  "dgSpecHash": "bU/7x04B9CxorFAmHTGViy2kDsLVVqEdeOc8pqWNx4qVF6iDeMStPqcoaSF+UnEMCm7eEXW7xpiIrq9myTID/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Lucas\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.dotnet.internalabstractions\\1.0.0\\microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dXNH8QAvhOlrROZToWCin1tpf+xzZ97eoeseMGROKvq0sPSaVqcIq6iZnnqv5v/EVpJqcZ7r/BzfpsBVxeQcbA==",
+  "dgSpecHash": "2nlIhuGEFWfcTMNRwxtLAmlFvPjR5Ko3hQlwb9k0zdqH+5J4SwL/DsMAyXMtcaEpLgzAEt82BIs/NC913qF6Mw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Test.Integrationtest\\Microwave.Test.Integrationtest.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Lucas\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\Lucas\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Lucas\\.nuget\\packages\\microsoft.dotnet.internalabstractions\\1.0.0\\microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512",
