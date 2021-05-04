@@ -30,7 +30,7 @@ namespace Microwave.Test.Integrationtest
             _cookController = Substitute.For<ICookController>();
             _display = Substitute.For<IDisplay>();
             _light = Substitute.For<ILight>();
-
+            //
             _userInterface = new UserInterface(_powerButton, _timeButton, _cancelStartButton, _door, _display, _light, _cookController);
         }
     }
