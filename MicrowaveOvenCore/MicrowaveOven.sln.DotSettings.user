@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=42182468_002De42e_002D4858_002D967f_002D5aafeeb61364/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TimeButton_IsPressed_TimerOn" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep1.TimeButton_IsPressed_TimerOn&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep1.PowerButton_IsPressed_ShowPower&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep1.Door_Opened_Light_On&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

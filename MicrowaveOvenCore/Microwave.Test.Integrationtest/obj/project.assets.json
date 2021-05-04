@@ -460,7 +460,7 @@
           "lib/netstandard2.0/NuGet.Frameworks.dll": {}
         }
       },
-      "NUnit/3.12.0": {
+      "NUnit/3.13.1": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -1975,10 +1975,10 @@
         "nuget.frameworks.nuspec"
       ]
     },
-    "NUnit/3.12.0": {
-      "sha512": "3oJTrcUcT9wmweBUwgUf0f1XIYy6RZq2ziV+RM95HMKAJGsHPN2i3MKK1dAPvDPMRLz799Llj4eyu/STB9Q7OA==",
+    "NUnit/3.13.1": {
+      "sha512": "vWBvrSelmTYwqHWvO3dA63z7cOpaFR/3nJ9MMVLBkWeaWa7oiglPPm5g1h96B4i2XXqjFexxhR5MyMjmIJYPfg==",
       "type": "package",
-      "path": "nunit/3.12.0",
+      "path": "nunit/3.13.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1986,22 +1986,16 @@
         "LICENSE.txt",
         "NOTICES.txt",
         "build/NUnit.props",
+        "icon.png",
         "lib/net35/nunit.framework.dll",
-        "lib/net35/nunit.framework.pdb",
         "lib/net35/nunit.framework.xml",
         "lib/net40/nunit.framework.dll",
-        "lib/net40/nunit.framework.pdb",
         "lib/net40/nunit.framework.xml",
         "lib/net45/nunit.framework.dll",
-        "lib/net45/nunit.framework.pdb",
         "lib/net45/nunit.framework.xml",
-        "lib/netstandard1.4/nunit.framework.dll",
-        "lib/netstandard1.4/nunit.framework.pdb",
-        "lib/netstandard1.4/nunit.framework.xml",
         "lib/netstandard2.0/nunit.framework.dll",
-        "lib/netstandard2.0/nunit.framework.pdb",
         "lib/netstandard2.0/nunit.framework.xml",
-        "nunit.3.12.0.nupkg.sha512",
+        "nunit.3.13.1.nupkg.sha512",
         "nunit.nuspec"
       ]
     },
@@ -4837,24 +4831,28 @@
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.NET.Test.Sdk >= 16.5.0",
       "Microwave.Classes >= 1.0.0",
-      "NUnit >= 3.12.0",
+      "NUnit >= 3.13.1",
       "NUnit3TestAdapter >= 3.17.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\shynt\\.nuget\\packages\\": {}
+    "C:\\Users\\Lucas\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Test.Integrationtest\\Microwave.Test.Integrationtest.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Test.Integrationtest\\Microwave.Test.Integrationtest.csproj",
       "projectName": "Microwave.Test.Integrationtest",
-      "projectPath": "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Test.Integrationtest\\Microwave.Test.Integrationtest.csproj",
-      "packagesPath": "C:\\Users\\shynt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Test.Integrationtest\\obj\\",
+      "projectPath": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Test.Integrationtest\\Microwave.Test.Integrationtest.csproj",
+      "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Test.Integrationtest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\shynt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4868,8 +4866,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj": {
-              "projectPath": "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj"
+            "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj": {
+              "projectPath": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj"
             }
           }
         }
@@ -4890,7 +4888,7 @@
           },
           "NUnit": {
             "target": "Package",
-            "version": "[3.12.0, )"
+            "version": "[3.13.1, )"
           },
           "NUnit3TestAdapter": {
             "target": "Package",

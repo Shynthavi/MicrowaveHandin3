@@ -15,3 +15,20 @@ C:\Users\shynt\Source\Repos\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes
 C:\Users\shynt\Source\Repos\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\nunit.engine.dll
 C:\Users\shynt\Source\Repos\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
 C:\Users\shynt\Source\Repos\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Extension.NUnit.Xml.TestLogger.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Extension.NUnit.Xml.TestAdapter.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\Spekt.TestLogger.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\nunit.engine.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\nunit.engine.api.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\nunit.engine.core.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\Microwave.Classes.deps.json
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\Microwave.Classes.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\bin\Debug\netcoreapp3.1\Microwave.Classes.pdb
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\obj\Debug\netcoreapp3.1\Microwave.Classes.csprojAssemblyReference.cache
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\obj\Debug\netcoreapp3.1\Microwave.Classes.AssemblyInfoInputs.cache
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\obj\Debug\netcoreapp3.1\Microwave.Classes.AssemblyInfo.cs
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\obj\Debug\netcoreapp3.1\Microwave.Classes.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\obj\Debug\netcoreapp3.1\Microwave.Classes.dll
+C:\Users\Lucas\Desktop\Aarhus_Universitet\IKT\4. Semester\SWD\Handin\Handin3\MicrowaveHandin3\MicrowaveOvenCore\Microwave.Classes\obj\Debug\netcoreapp3.1\Microwave.Classes.pdb

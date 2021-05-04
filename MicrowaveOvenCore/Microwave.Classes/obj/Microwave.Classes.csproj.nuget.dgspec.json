@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj": {}
+    "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj": {
+    "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj",
+        "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj",
         "projectName": "Microwave.Classes",
-        "projectPath": "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj",
-        "packagesPath": "C:\\Users\\shynt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shynt\\source\\repos\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\obj\\",
+        "projectPath": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\Microwave.Classes.csproj",
+        "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lucas\\Desktop\\Aarhus_Universitet\\IKT\\4. Semester\\SWD\\Handin\\Handin3\\MicrowaveHandin3\\MicrowaveOvenCore\\Microwave.Classes\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\shynt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
