@@ -4,5 +4,8 @@
     &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep1&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep2.Door_Opened_LightOn_Output&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep2&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep3.CookController_StartCooking&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep3.CookController_Stop&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep3&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

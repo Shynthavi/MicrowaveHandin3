@@ -28,8 +28,8 @@ namespace Microwave.Test.Integrationtest
             _startCancelButton = new Button();
             _door = new Door();
             _cookController = Substitute.For<ICookController>();
-            _display = new Display(_output);
             _output = Substitute.For<IOutput>();
+            _display = new Display(_output);
             _light = new Light(_output);
 
             _userInterface = new UserInterface(_powerButton, _timeButton, _startCancelButton, _door, _display, _light,
@@ -74,7 +74,7 @@ namespace Microwave.Test.Integrationtest
 
             //Assert
             _output.Received(1).OutputLine("Display shows: 50 W");
-            }
+        }
 
         [Test]
         public void TimerButton_PressOnce_ShowTime()

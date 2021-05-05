@@ -28,9 +28,11 @@ namespace Microwave.Test.Integrationtest
             _timeButton = new Button();
             _startCancelButton = new Button();
             _door = new Door();
-            _display = new Display(_output);
             _output = Substitute.For<IOutput>();
+            _display = new Display(_output);
             _light = new Light(_output);
+            _powerTube = Substitute.For<IPowerTube>();
+            _timer = Substitute.For<ITimer>();
 
             _cookController = new CookController(_timer, _display, _powerTube);
 
@@ -41,6 +43,57 @@ namespace Microwave.Test.Integrationtest
             _cookController.UI = _userInterface;
         }
 
+
+        [Test]
+        public void CookController_StartCooking()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                _timer.Received(1).Start(1*60);
+                _powerTube.Received(1).TurnOn(50);
+            });
+        }
+
+        [Test]
+        public void CookController_OpenDoor_Stop()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+            _door.Open();
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                _timer.Received(1).Stop();
+                _powerTube.Received(1).TurnOff();
+            });
+        }
+
+
+        [Test]
+        public void CookController_StartCancelPress_Stop()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+            _startCancelButton.Press();
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                _timer.Received(1).Stop();
+                _powerTube.Received(1).TurnOff();
+            });
+        }
 
     }
 }
