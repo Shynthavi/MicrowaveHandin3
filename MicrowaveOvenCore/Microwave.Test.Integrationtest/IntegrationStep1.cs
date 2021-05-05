@@ -81,7 +81,7 @@ namespace Microwave.Test.Integrationtest
         #region PowerButton
 
         [Test]
-        public void PowerButton_On_ShowPower()
+        public void PowerButton_PressOnce_ShowPower()
         {
             //Act
             _powerButton.Press();
@@ -90,12 +90,126 @@ namespace Microwave.Test.Integrationtest
             _display.Received(1).ShowPower(50);
         }
 
+        [Test]
+        public void PowerButton_PressTwice_ShowPower()
+        {
+            //Act
+            _powerButton.Press();
+            _powerButton.Press();
 
+            //Assert
+            _display.Received(1).ShowPower(100);
+        }
 
+        [Test]
+        public void PowerButton_PowerLevel700_ShowPower()
+        {
+            //Act
+            for (int i = 0; i < 14; i++)
+            {
+                _powerButton.Press();
+            }
+
+            //Assert
+            _display.Received(1).ShowPower(50);
+        }
 
         #endregion
 
+        //1C
+        #region TimeButton
 
+        [Test]
+        public void TimerButton_PressOnce_ShowTime()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+
+            //Assert
+            _display.Received(1).ShowTime(1,0);
+        }
+
+        [Test]
+        public void TimerButton_PressTwice_ShowTime()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _timeButton.Press();
+
+            //Assert
+            _display.Received(1).ShowTime(2, 0);
+        }
+
+        [Test]
+        public void TimerButton_Press_PowerNotPressed()
+        {
+            //Act
+            _timeButton.Press();
+
+            //Assert
+            _display.DidNotReceive().ShowTime(1, 0);
+        }
+
+        #endregion
+
+        //1D
+        #region StartCancelButton
+
+        [Test]
+        public void StartCancelButton_Press_TurnOn_StartCooking()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                _light.TurnOn();
+                _cookController.Received(1).StartCooking(50,1*60);
+            });
+        }
+
+        [Test]
+        public void StartCancelButton_TimerPowerPressedTwice_StartCooking()
+        {
+            //Act
+            _powerButton.Press();
+            _powerButton.Press();
+            _timeButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                _light.TurnOn();
+                _cookController.Received(1).StartCooking(100, 2 * 60);
+            });
+        }
+
+        [Test]
+        public void StartCancelButton_Press_CookingStarted()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+            _startCancelButton.Press();
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                _light.TurnOff();
+                _cookController.Received(1).Stop();
+                _display.Clear();
+            });
+        }
+
+        #endregion
     }
 
 }
