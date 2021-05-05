@@ -47,11 +47,17 @@ namespace Microwave.Test.Integrationtest
         [Test]
         public void TimerTest()
         {
+            //Arrange
+            //ICookController fakeCookController = Substitute.For<ICookController>();
+            ITimer fakeTimer = Substitute.For<ITimer>();
+
             //Act
             _powerButton.Press();
             _timeButton.Press();
             _startCancelButton.Press();
-
+            
+            //Violates black box testing
+            
             //Assert
             _output.Received(1).OutputLine("Display shows: 00:00");
         }
