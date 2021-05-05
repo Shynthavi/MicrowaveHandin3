@@ -17,6 +17,7 @@
     &lt;TestId&gt;NUnit3x::2EC804E6-41EE-41BF-A783-A16DD3D642B6::.NETCoreApp,Version=v3.1::Microwave.Test.Unit.TimerTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep6.Display_Output&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep6.something&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::1EF3A9D8-FAC2-4CF1-8981-4151252D9772::.NETCoreApp,Version=v3.1::Microwave.Test.Integrationtest.IntegrationStep6.Display_Light_PowerTube_Output&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d0f2cc53_002Dc0fc_002D49b1_002D9fac_002D01280493dbac/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="StartCooking_PowerTube_On" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;

@@ -24,6 +24,7 @@ namespace Microwave.Test.Integrationtest
         private IOutput _output;
         private IPowerTube _powerTube;
         private ITimer _timer;
+        private StringWriter _sw;
 
         [SetUp]
         public void Setup()
@@ -46,21 +47,20 @@ namespace Microwave.Test.Integrationtest
             //Property dependency injection
             _cookController.UI = _userInterface;
 
-
+            _sw = new StringWriter();
+            Console.SetOut(_sw);
         }
 
 
         [Test]
-        public void Display_Output()
+        public void Display_Light_PowerTube_Output()
         {
             //Arrange
-            var expected = "Display shows: 00:00";
+            var expected = "Display shows: 50 W\r\nDisplay shows: 01:00\r\nLight is turned on" +
+                           "\r\nPowerTube works with 50\r\nDisplay shows: 00:00\r\nPowerTube turned off" +
+                           "\r\nDisplay cleared\r\nLight is turned off\r\n";
             var output = new StringWriter();
             Console.SetOut(output);
-
-
-            //var input = new StringReader("00:00");
-            //Console.SetIn(input);
 
             //Act
             _powerButton.Press();
