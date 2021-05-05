@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Threading;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Microwave.Classes.Boundary;
 using Microwave.Classes.Controllers;
 using Microwave.Classes.Interfaces;
@@ -43,12 +45,23 @@ namespace Microwave.Test.Integrationtest
 
             //Property dependency injection
             _cookController.UI = _userInterface;
+
+
         }
 
 
         [Test]
         public void Display_Output()
         {
+            //Arrange
+            var expected = "Display shows: 00:00";
+            var output = new StringWriter();
+            Console.SetOut(output);
+
+
+            //var input = new StringReader("00:00");
+            //Console.SetIn(input);
+
             //Act
             _powerButton.Press();
             _timeButton.Press();
@@ -57,8 +70,9 @@ namespace Microwave.Test.Integrationtest
             Thread.Sleep(1200);
 
             //Assert
-            
+            Assert.That(output.ToString(), Is.EqualTo(expected));
         }
+
 
     }
 }
