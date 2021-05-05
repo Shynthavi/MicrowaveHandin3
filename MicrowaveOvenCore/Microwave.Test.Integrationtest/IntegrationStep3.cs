@@ -4,21 +4,22 @@ using Microwave.Classes.Controllers;
 using Microwave.Classes.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
-
 namespace Microwave.Test.Integrationtest
 {
     [TestFixture]
-    public class IntegrationStep2
+    public class IntegrationStep3
     {
         private IButton _powerButton;
         private IButton _timeButton;
         private IButton _startCancelButton;
         private IDoor _door;
-        private ICookController _cookController;
+        private CookController _cookController;
         private IDisplay _display;
         private ILight _light;
         private IUserInterface _userInterface;
         private IOutput _output;
+        private IPowerTube _powerTube;
+        private ITimer _timer;
 
         [SetUp]
         public void Setup()
@@ -27,70 +28,41 @@ namespace Microwave.Test.Integrationtest
             _timeButton = new Button();
             _startCancelButton = new Button();
             _door = new Door();
-            _cookController = Substitute.For<ICookController>();
             _output = Substitute.For<IOutput>();
             _display = new Display(_output);
             _light = new Light(_output);
+            _powerTube = Substitute.For<IPowerTube>();
+            _timer = Substitute.For<ITimer>();
+
+            _cookController = new CookController(_timer, _display, _powerTube);
 
             _userInterface = new UserInterface(_powerButton, _timeButton, _startCancelButton, _door, _display, _light,
                 _cookController);
+
+            //Property dependency injection
+            _cookController.UI = _userInterface;
         }
-
-        //2A
-        #region Light
-
-        [Test]
-        public void Door_Opened_LightOn_Output()
-        {
-            //Act
-            _door.Open();
-
-            //Assert
-            _output.Received(1).OutputLine("Light is turned on");
-        }
-
-        [Test]
-        public void Door_Closed_LightOff_Output()
-        {
-            //Act
-            _door.Open();
-            _door.Close();
-
-            //Assert
-            _output.Received(1).OutputLine("Light is turned off");
-        }
-        #endregion
-
-        //2B
-        #region Display
-
-        //ShowPower(), ShowTime(), Clear()
 
 
         [Test]
-        public void PowerButton_PressOnce_ShowPower()
-        { 
-            //Act
-            _powerButton.Press();
-
-            //Assert
-            _output.Received(1).OutputLine("Display shows: 50 W");
-        }
-
-        [Test]
-        public void TimerButton_PressOnce_ShowTime()
+        public void CookController_StartCooking()
         {
             //Act
             _powerButton.Press();
             _timeButton.Press();
+            _startCancelButton.Press();
 
             //Assert
-            _output.Received(1).OutputLine("Display shows: 01:00");
+            Assert.Multiple(() =>
+            {
+                _timer.Received(1).Start(1*60);
+                _powerTube.Received(1).TurnOn(50);
+            });
         }
 
         [Test]
-        public void Display_Clear()
-        { 
+        public void CookController_OpenDoor_Stop()
+        {
             //Act
             _powerButton.Press();
             _timeButton.Press();
@@ -98,9 +70,30 @@ namespace Microwave.Test.Integrationtest
             _door.Open();
 
             //Assert
-            _output.Received(1).OutputLine("Display cleared");
+            Assert.Multiple(() =>
+            {
+                _timer.Received(1).Stop();
+                _powerTube.Received(1).TurnOff();
+            });
         }
-        #endregion
+
+
+        [Test]
+        public void CookController_StartCancelPress_Stop()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+            _startCancelButton.Press();
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                _timer.Received(1).Stop();
+                _powerTube.Received(1).TurnOff();
+            });
+        }
 
     }
 }
