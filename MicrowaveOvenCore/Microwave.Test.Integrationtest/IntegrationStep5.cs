@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Threading;
 using Microwave.Classes.Boundary;
 using Microwave.Classes.Controllers;
 using Microwave.Classes.Interfaces;
 using NSubstitute;
 using NUnit.Framework;
+using Timer = Microwave.Classes.Boundary.Timer;
 
 namespace Microwave.Test.Integrationtest
 {
@@ -44,22 +46,59 @@ namespace Microwave.Test.Integrationtest
             _cookController.UI = _userInterface;
         }
 
-        [Test]
-        public void TimerTest()
-        {
-            //Arrange
-            //ICookController fakeCookController = Substitute.For<ICookController>();
-            ITimer fakeTimer = Substitute.For<ITimer>();
+        //[Test]
+        //public void TimeRemaining_CookController()
+        //{
+        //    //Arrange
+        //    ITimer fakeTimer = Substitute.For<ITimer>();
 
+        //    //Act
+        //    _powerButton.Press();
+        //    _timeButton.Press();
+        //    _timeButton.Press();
+        //    _startCancelButton.Press();
+
+        //    fakeTimer.TimeRemaining.Returns(60);
+        //    fakeTimer.TimerTick += Raise.EventWith(this, EventArgs.Empty);
+        //    fakeTimer.TimeRemaining.Returns(0);
+        //    fakeTimer.TimerTick += Raise.EventWith(this, EventArgs.Empty);
+        //    //Violates black box testing
+
+        //    //Assert
+        //    _output.Received(2).OutputLine("Display shows: 01:00");
+        //}
+
+
+        [Test]
+        public void OnTimerTick_CookController()
+        {
             //Act
             _powerButton.Press();
             _timeButton.Press();
             _startCancelButton.Press();
-            
-            //Violates black box testing
-            
+
+            Thread.Sleep(3000);
+
             //Assert
-            _output.Received(1).OutputLine("Display shows: 00:00");
+            _output.Received().OutputLine(Arg.Is<string>(str => str.Contains("00:00")));
+
+        }
+
+        [Test]
+        public void OnTimerTick_CookController_3()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _timeButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+
+            Thread.Sleep(3000);
+
+            //Assert
+            _output.Received(2).OutputLine(Arg.Is<string>(str => str.Contains("02:00"))); //Receives two, once when timer increments, and second time when timer decrements
+
         }
     }
 }
