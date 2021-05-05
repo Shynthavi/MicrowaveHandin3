@@ -24,6 +24,7 @@ namespace Microwave.Test.Integrationtest
         private IPowerTube _powerTube;
         private ITimer _timer;
 
+        #region SetUp
         [SetUp]
         public void Setup()
         {
@@ -41,20 +42,42 @@ namespace Microwave.Test.Integrationtest
             _cookController.UI = _userInterface;
 
         }
+        #endregion
 
+        #region PowerButton Pressed
+        //Denne test fandt fejlen "Input out of range". Da de 3. tryk på powerButton overskrider max på 100. jf. det oprindelige program.
+        //Dette er blevet ændret, så range nu godkender værdier fra 50 til 700 jf. øvelsesvejledningen.
+
+        [TestCase(1)]
+        [TestCase(3)]
+        [TestCase(14)]
+        [TestCase(15)]
         [Test]
-        public void StartCooking_PowerTube_On()
+        public void StartCooking_PowerTube_On(int ButtonPress)
         {
+            int power;
             //Arrange
-            int power = 50;
+            if (ButtonPress > 14)
+            {
+                power = 50;
+            }
+            else
+            {
+                power = ButtonPress * 50;
+            }
+            
             _door.Close();
+
             //Act
-            _powerButton.Press();
+            for(int i =0; i<ButtonPress;i++)
+            {
+                _powerButton.Press();
+            }
+
             _timeButton.Press();
             _startCancelButton.Press();
+           
             //Assert
-            //_output.Received(1).OutputLine($"PowerTube works with {power}");
-
             Assert.Multiple(() =>
             {
                 _output.Received(1).OutputLine("Light is turned on");
@@ -62,48 +85,47 @@ namespace Microwave.Test.Integrationtest
             });
 
         }
+        #endregion //
 
-        //Denne test finder fejlen "Input out of range". Da de 3 tryk på powerButton overskrider max på 100. 
-        [Test]
-        public void StartCooking_PowerTube_On_PowerPressedX3()
-        {
-            //Arrange
-            int power = 150;
-            _door.Close();
-            //Act
-            _powerButton.Press();
-            _powerButton.Press();
-            _powerButton.Press();
-            _timeButton.Press();
-            _startCancelButton.Press();
-            //Assert
-            //_output.Received(1).OutputLine($"PowerTube works with {power}");
+        #region 1. Extension Door opened while cooking
 
-            Assert.Multiple(() =>
-            {
-                _output.Received(1).OutputLine("Light is turned on");
-                _output.Received(1).OutputLine($"PowerTube works with {power}");
-            });
-
-        }
-
+        //Denne test er til første extension jf. sekvensdiagrammet - hvor brugeren åbner door mens cooking er igang
 
         [Test]
         public void CookingStarted_DoorOpen_PowerTube_Off()
         {
             //Arrange
             _door.Close();
-
-            //Act
             _powerButton.Press();
             _timeButton.Press();
             _startCancelButton.Press();
+
+            //Act
             _door.Open();
 
             //Assert
             _output.Received(1).OutputLine($"PowerTube turned off");
         }
+        #endregion
 
-   
+        #region 2. Extension cancelButton pressed while cooking
+        //2. Udvidelse jf. sekvensdiagrammet i øvelsesvejledningen. Brugeren trykker cancel, mens cooking er igang
+
+        [Test]
+        public void CookingStarted_StartCancelButton_IsPressed()
+        {
+            //Arrange
+            _door.Close();
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+
+            //Act
+            _startCancelButton.Press();
+
+            //Assert
+            _output.Received(1).OutputLine($"PowerTube turned off");
+        }
+        #endregion
     }
 }
