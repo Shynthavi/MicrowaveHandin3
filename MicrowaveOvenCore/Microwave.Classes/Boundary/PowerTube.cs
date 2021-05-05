@@ -16,6 +16,7 @@ namespace Microwave.Classes.Boundary
 
         public void TurnOn(int power)
         {
+            //Ændret fra "power <1 || 100 < power" til nedenstående jf. øvelsesvejledningen
             if (power < 50 || 700 < power)
             {
                 throw new ArgumentOutOfRangeException("power", power, "Must be between 50 and 700 (incl.)");
