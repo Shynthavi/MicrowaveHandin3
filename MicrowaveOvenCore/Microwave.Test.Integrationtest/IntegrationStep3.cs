@@ -55,7 +55,7 @@ namespace Microwave.Test.Integrationtest
             //Assert
             Assert.Multiple(() =>
             {
-                _timer.Received(1).Start(1*60);
+                _timer.Received(1).Start(1*60*1000/60);
                 _powerTube.Received(1).TurnOn(50);
             });
         }

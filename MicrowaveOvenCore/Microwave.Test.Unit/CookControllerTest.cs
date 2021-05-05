@@ -29,7 +29,8 @@ namespace Microwave.Test.Unit
 
 
         //This test has been changed due to the Timer error found.
-        //(*1000/60) has been added to counter (*60/1000) that was added in StartCooking(), when timer Start() is called
+        //(*1000/60) has been added to counter (*60/1000) that was added in StartCooking(),
+        //when timer Start() is called
         [Test]
         public void StartCooking_ValidParameters_TimerStarted()
         {
