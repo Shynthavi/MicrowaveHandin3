@@ -91,14 +91,14 @@ namespace Microwave.Test.Integrationtest
         }
 
         [Test]
-        public void PowerButton_PressTwice_ShowPower()
+        public void PowerButton_PressThrice_ShowPower()
         {
             //Act
             _powerButton.Press();
             _powerButton.Press();
 
             //Assert
-            _display.Received(1).ShowPower(100);
+            _display.Received(1).ShowPower(150);
         }
 
         [Test]

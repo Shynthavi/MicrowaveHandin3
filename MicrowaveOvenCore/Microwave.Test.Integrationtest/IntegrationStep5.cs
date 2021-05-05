@@ -32,8 +32,8 @@ namespace Microwave.Test.Integrationtest
             _output = Substitute.For<IOutput>();
             _display = new Display(_output);
             _light = new Light(_output);
-            _powerTube = Substitute.For<IPowerTube>();
-            _timer = Substitute.For<ITimer>();
+            _powerTube = new PowerTube(_output);
+            _timer = new Timer();
 
             _cookController = new CookController(_timer, _display, _powerTube);
 
@@ -42,6 +42,18 @@ namespace Microwave.Test.Integrationtest
 
             //Property dependency injection
             _cookController.UI = _userInterface;
+        }
+
+        [Test]
+        public void TimerTest()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+
+            //Assert
+            _output.Received(1).OutputLine("Display shows: 00:00");
         }
     }
 }

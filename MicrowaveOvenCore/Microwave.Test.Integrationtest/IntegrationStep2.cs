@@ -36,7 +36,7 @@ namespace Microwave.Test.Integrationtest
                 _cookController);
         }
 
-
+        //2A
         #region Light
 
         [Test]
@@ -61,6 +61,7 @@ namespace Microwave.Test.Integrationtest
         }
         #endregion
 
+        //2B
         #region Display
 
         //ShowPower(), ShowTime(), Clear()
