@@ -10,7 +10,7 @@ using NUnit.Framework;
 
 namespace Microwave.Test.Integrationtest
 {
-    public class IntegrationStep6
+    public class IntegrationStep4
     {
         private IButton _powerButton;
         private IButton _timeButton;
