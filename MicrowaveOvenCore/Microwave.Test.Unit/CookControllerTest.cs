@@ -27,12 +27,15 @@ namespace Microwave.Test.Unit
             uut = new CookController(timer, display, powerTube, ui);
         }
 
+
+        //This test has been changed due to the Timer error found.
+        //(*1000/60) has been added to counter (*60/1000) that was added in StartCooking(), when timer Start() is called
         [Test]
         public void StartCooking_ValidParameters_TimerStarted()
         {
             uut.StartCooking(50, 60);
 
-            timer.Received().Start(60);
+            timer.Received().Start(60*1000/60);
         }
 
         [Test]
@@ -43,12 +46,16 @@ namespace Microwave.Test.Unit
             powerTube.Received().TurnOn(50);
         }
 
+
+        //This test has been changed due to the Timer error found.
+        //(*1000/60) has been added to counter (*60/1000) that was added in OnTimerTick(), TimeRemaining.
+        //+1 has been added to counter the rounding down error.
         [Test]
         public void Cooking_TimerTick_DisplayCalled()
         {
             uut.StartCooking(50, 60);
 
-            timer.TimeRemaining.Returns(115);
+            timer.TimeRemaining.Returns((115*1000/60)+1);
             timer.TimerTick += Raise.EventWith(this, EventArgs.Empty);
 
             display.Received().ShowTime(1, 55);

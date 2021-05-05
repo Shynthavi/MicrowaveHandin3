@@ -40,7 +40,7 @@ namespace Microwave.Classes.Controllers
         public void StartCooking(int power, int time)
         {
             myPowerTube.TurnOn(power);
-            myTimer.Start(time);
+            myTimer.Start(time * 1000 / 60); //ERROR 2 correction: Added /60*1000 to convert seconds to "timer"-seconds
             isCooking = true;
         }
 
@@ -65,7 +65,7 @@ namespace Microwave.Classes.Controllers
         {
             if (isCooking)
             {
-                int remaining = myTimer.TimeRemaining;
+                int remaining = myTimer.TimeRemaining*60/1000; //ERROR 2 correction: Added *60/1000 to convert back to seconds
                 myDisplay.ShowTime(remaining / 60, remaining % 60);
             }
         }

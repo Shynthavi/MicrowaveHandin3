@@ -96,6 +96,7 @@ namespace Microwave.Test.Integrationtest
             //Act
             _powerButton.Press();
             _powerButton.Press();
+            _powerButton.Press();
 
             //Assert
             _display.Received(1).ShowPower(150);

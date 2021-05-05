@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Microwave.Classes.Boundary;
 using Microwave.Classes.Controllers;
 using Microwave.Classes.Interfaces;
@@ -33,7 +34,7 @@ namespace Microwave.Test.Integrationtest
             _display = new Display(_output);
             _light = new Light(_output);
             _powerTube = new PowerTube(_output);
-            _timer = new Timer();
+            _timer = new Microwave.Classes.Boundary.Timer();
 
             _cookController = new CookController(_timer, _display, _powerTube);
 
@@ -44,16 +45,37 @@ namespace Microwave.Test.Integrationtest
             _cookController.UI = _userInterface;
         }
 
+
         [Test]
-        public void TimerTest()
+        public void OnTimerTick_CookController()
         {
             //Act
             _powerButton.Press();
             _timeButton.Press();
             _startCancelButton.Press();
 
+            Thread.Sleep(3000);
+
             //Assert
-            _output.Received(1).OutputLine("Display shows: 00:00");
+            _output.Received().OutputLine(Arg.Is<string>(str => str.Contains("00:00")));
+
+        }
+
+        [Test]
+        public void OnTimerTick_CookController_3()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _timeButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+
+            Thread.Sleep(3000);
+
+            //Assert
+            _output.Received(2).OutputLine(Arg.Is<string>(str => str.Contains("02:00"))); //Receives two, once when timer increments, and second time when timer decrements
+
         }
     }
 }
