@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace Microwave.Test.Integrationtest
 {
     [TestFixture]
-    public class IntegrationStep5
+    public class IntegrationStep6
     {
         private IButton _powerButton;
         private IButton _timeButton;
@@ -30,7 +30,7 @@ namespace Microwave.Test.Integrationtest
             _timeButton = new Button();
             _startCancelButton = new Button();
             _door = new Door();
-            _output = Substitute.For<IOutput>();
+            _output = new Output();
             _display = new Display(_output);
             _light = new Light(_output);
             _powerTube = new PowerTube(_output);
@@ -47,35 +47,18 @@ namespace Microwave.Test.Integrationtest
 
 
         [Test]
-        public void OnTimerTick_CookController()
+        public void Display_Output()
         {
             //Act
             _powerButton.Press();
             _timeButton.Press();
             _startCancelButton.Press();
 
-            Thread.Sleep(3000);
+            Thread.Sleep(1200);
 
             //Assert
-            _output.Received().OutputLine(Arg.Is<string>(str => str.Contains("00:00")));
-
+            
         }
 
-        [Test]
-        public void OnTimerTick_CookController_3()
-        {
-            //Act
-            _powerButton.Press();
-            _timeButton.Press();
-            _timeButton.Press();
-            _timeButton.Press();
-            _startCancelButton.Press();
-
-            Thread.Sleep(3000);
-
-            //Assert
-            _output.Received(2).OutputLine(Arg.Is<string>(str => str.Contains("02:00"))); //Receives two, once when timer increments, and second time when timer decrements
-
-        }
     }
 }
