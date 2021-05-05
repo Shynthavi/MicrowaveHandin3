@@ -24,7 +24,7 @@ namespace Microwave.Classes.Boundary
 
         public void Start(int time)
         {
-            TimeRemaining = time/60*1000; //ERROR 2 correction: Added /60*1000 to convert seconds to "timer"-seconds
+            TimeRemaining = time;
             timer.Enabled = true;
         }
 
