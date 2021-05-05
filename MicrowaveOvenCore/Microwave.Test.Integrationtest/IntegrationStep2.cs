@@ -64,17 +64,41 @@ namespace Microwave.Test.Integrationtest
         #region Display
 
         //ShowPower(), ShowTime(), Clear()
+
+
         [Test]
         public void PowerButton_PressOnce_ShowPower()
-        {
+        { 
             //Act
             _powerButton.Press();
 
             //Assert
-            _output.Received(1).OutputLine($"Display shows: 50 W");
+            _output.Received(1).OutputLine("Display shows: 50 W");
+            }
+
+        [Test]
+        public void TimerButton_PressOnce_ShowTime()
+        {
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+
+            //Assert
+            _output.Received(1).OutputLine("Display shows: 01:00");
         }
 
+        [Test]
+        public void Display_Clear()
+        { 
+            //Act
+            _powerButton.Press();
+            _timeButton.Press();
+            _startCancelButton.Press();
+            _door.Open();
 
+            //Assert
+            _output.Received(1).OutputLine("Display cleared");
+        }
         #endregion
 
     }
