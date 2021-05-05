@@ -34,6 +34,9 @@ namespace Microwave.Test.Integrationtest
                 _cookController);
         }
 
+        //1A
+        #region Door
+        //Door
         [Test]
         public void Door_Opened_Light_On()
         {
@@ -58,12 +61,10 @@ namespace Microwave.Test.Integrationtest
         [Test]
         public void Door_Opened_Cooking_Started()
         {
-            //Arrange
+            //Act
             _powerButton.Press();
             _timeButton.Press();
             _startCancelButton.Press();
-
-            //Act
             _door.Open();
 
             //Assert
@@ -74,7 +75,25 @@ namespace Microwave.Test.Integrationtest
             });
         }
 
+        #endregion
 
+        //1B
+        #region PowerButton
+
+        [Test]
+        public void PowerButton_On_ShowPower()
+        {
+            //Act
+            _powerButton.Press();
+
+            //Assert
+            _display.Received(1).ShowPower(50);
+        }
+
+
+
+
+        #endregion
 
 
     }
